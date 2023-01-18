@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="clave, clave, clave">
+	<title>Landing page</title>
+	<link rel="stylesheet" href="estilos/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <video autoplay playinline muted loop>
+            <source src="video/rubik.mp4" type="video/mp4">
+        </video>
+        <div class="wrapper">
+            <div class="copy">
+                <p>LA 2023, <br> nic 081020 </p>
+                <p>PENSANDO EN EL FUTURO</p>
+                <p>enter <br>i'saac&reg;</p>
+                <p></p>
+            </div>
+        </div>
+        <div class="blocks">
+            <div class="block block-left"></div>
+            <div class="block block-right"></div>
+        </div>
+        <div class="letters">
+           <div class="row">
+                <div class="letter top-left">D</div>
+                <div class="letter top-right">0</div>
+            </div>
+            <div class="row">
+                <div class="letter bottom-right">8</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        gsap.from(".letter", 0.8, {
+            y: -20,
+            opacity: 0,
+            ease: "power3.inOut",
+            stagger: 0.1,
+        });
+        
+        gsap.to(".top-left, .top-right", 2, {
+            top: "0",
+            ease:"power3.inOut",
+            delay: 2,
+        });
+        
+        gsap.to(".bottom-right", 2, {
+            bottom: "0",
+            ease:"power3.inOut",
+            delay: 2,
+        });
+        
+        gsap.to(".top-left", 2, {
+            left: "0",
+            ease:"power3.inOut",
+            delay: 4,
+        }); 
+        
+        gsap.to(".top-right", 2, {
+            right: "0",
+            ease:"power3.inOut",
+            delay: 4,
+        });
+        
+        gsap.to(".bottom-right", 2, {
+            right: "0",
+            ease:"power3.inOut",
+            delay: 4,
+        });
+        
+        gsap.to(".block-left", 2, {
+            left: "-50%",
+            ease:"power3.inOut",
+            delay: 4,
+        });
+        
+        gsap.to(".block-right", 2, {
+            right: "-50%",
+            ease:"power3.inOut",
+            delay: 4,
+        });
+    </script>
+</body>
+</html>
